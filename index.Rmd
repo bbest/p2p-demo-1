@@ -1,5 +1,5 @@
 ---
-title: "Pole to Pole Demo using Gil's Israel Quadrat Dataset"
+title: "P2P Data Wrangling Demo using Gil's Israel Quadrat Dataset"
 author: "Ben Best"
 date: "8/3/2018"
 output:
@@ -141,7 +141,7 @@ locs %>% head(100) %>% DT::datatable()
 
 ```{r}
 library(leaflet)
-locs
+
 leaflet(locs) %>%
   addProviderTiles(providers$Esri.OceanBasemap) %>%
   addMarkers(lng = ~lon, lat = ~lat, label = ~loc_id)
@@ -172,13 +172,17 @@ tbl_to_csv <- function(tbl, dir = here("data/clean")){
 sapply(c("spp", "obs", "obs_sum", "qrt", "sites", "locs"), tbl_to_csv)
 ```
 
-
 ## Wrangle to Darwin Core
+
+TODO
 
 ## Basic Plots
 
+TODO
+
 ### Boxplot between years & species
 
+TODO
 
 
 
